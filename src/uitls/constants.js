@@ -1,3 +1,30 @@
+export const skillsData = [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "Typescript",
+  "React",
+  "Angular",
+  "Redux",
+  "Tailwind",
+  "MaterialUI",
+  "Bootstrap",
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+  "Git",
+  "Jira",
+  "AWS",
+  "Docker",
+  "Figma",
+  "Firebase",
+  "Node.js",
+  "Nest.js",
+  "Express.js",
+  "Sequelize",
+  "TypeORM",
+];
+
 export const particalsOptions1 = {
   background: {
     color: "transparent", // Keeps section background visible

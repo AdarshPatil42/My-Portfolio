@@ -83,10 +83,14 @@
 
 // export default Navbar;
 
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../redux/store/store";
+import { toggleMode } from "../redux/features/lightModeSlice";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", link: "home" },
@@ -106,6 +110,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const mode = useSelector((state: RootState) => state.mode.lightMode);
+  const dispatch = useDispatch<AppDispatch>();
 
   // Scroll effect for background blur
   useEffect(() => {
@@ -179,6 +185,12 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
+      <button
+        className="fixed top-20 right-5 p-3 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+        onClick={() => dispatch(toggleMode())}
+      >
+        {mode ? <FaSun /> : <FaMoon />}
+      </button>
 
       {/* Mobile Menu */}
       {isOpen && (

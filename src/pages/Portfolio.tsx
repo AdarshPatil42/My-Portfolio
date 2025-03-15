@@ -44,7 +44,6 @@ const Portfolio: React.FC = () => {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log("xxxxxxxxxxxxxxxxx", entry);
         if (entry.isIntersecting) {
           setActiveSection(entry.target.id);
         }
@@ -72,11 +71,11 @@ const Portfolio: React.FC = () => {
       <Element name="about">
         <AboutMe />
       </Element>
-      <Element name="experience">
-        <Experience />
-      </Element>
       <Element name="skills">
         <Skills />
+      </Element>
+      <Element name="experience">
+        <Experience />
       </Element>
       <Element name="education">
         <Education />
