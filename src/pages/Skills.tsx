@@ -1,5 +1,5 @@
-import { skillsData } from "../uitls/constants.ts";
-import { skillsImage } from "../uitls/skill-images.ts";
+import { skillsData } from "../utils/constants.ts";
+import { skillsImage } from "../utils/skill-images.ts";
 import Marquee from "react-fast-marquee";
 
 const Skills: React.FC = () => {

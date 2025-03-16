@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import GlowingCard from "../components/GlowingCard";
 import { StudingImg } from "../theme/images.ts";
-import { ProjectsData, InternShipProjects } from "../uitls/constants.ts";
+import { ProjectsData, InternShipProjects } from "../utils/constants.ts";
 
 const Experience: React.FC = () => {
   return (
