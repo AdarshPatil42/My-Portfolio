@@ -8,7 +8,6 @@ import redux from "../assets/images/skills/redux.svg";
 import tailwind from "../assets/images/skills/tailwind.svg";
 import materialui from "../assets/images/skills/materialui.svg";
 import bootstrap from "../assets/images/skills/bootstrap.svg";
-// import mongodb from "../assets/images/skills/mongodb.svg";
 import mongodb from "../assets/images/skills/mongo.svg";
 import mysql from "../assets/images/skills/mysql.svg";
 import postgresql from "../assets/images/skills/postgresql.svg";
@@ -22,7 +21,7 @@ import nodejs from "../assets/images/skills/node-js.svg";
 import nestjs from "../assets/images/skills/nest-js.svg";
 import expressjs from "../assets/images/skills/express.svg";
 import sequelize from "../assets/images/skills/sequelize.svg";
-import typeorm from "../assets/images/skills/typeorm.svg";
+import typeorm from "../assets/images/skills/Typeorm.svg";
 import vite from "../assets/images/skills/vitejs.svg";
 
 export const skillsImage = (skill: string) => {
