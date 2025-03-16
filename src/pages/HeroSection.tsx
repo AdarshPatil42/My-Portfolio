@@ -42,7 +42,7 @@ const socialLinks = [
 const HeroSection: React.FC = () => {
   const navigate = useNavigate();
   const particlesInit = useCallback(async (engine: any) => {
-    await loadSlim(engine); // Use loadSlim instead of loadFull for better performance
+    await loadSlim(engine);
   }, []);
 
   return (

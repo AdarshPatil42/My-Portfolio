@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaXTwitter, FaFacebook } from "react-icons/fa6";
+// import { FaGithub, FaLinkedin, FaXTwitter, FaFacebook } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Right: Social Media */}
-        <div className="flex gap-5 text-xl">
+        {/* <div className="flex gap-5 text-xl">
           <a
             href="https://github.com"
             target="_blank"
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           >
             <FaFacebook />
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

@@ -40,8 +40,8 @@ const Portfolio: React.FC = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-50% 0px -50% 0px", // Detect when section is at center
-      threshold: 0.2, // Trigger when 20% of section is visible
+      rootMargin: "-50% 0px -50% 0px",
+      threshold: 0.2,
     };
 
     const observer = new IntersectionObserver((entries) => {

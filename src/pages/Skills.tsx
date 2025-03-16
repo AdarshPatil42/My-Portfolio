@@ -9,9 +9,6 @@ const Skills: React.FC = () => {
       className="relative h-[70vh] z-5 bg-gradient-to-br from-[#0b0f32] to-[#211944]"
     >
       <div className="h-[100%] w-[90%] m-auto">
-        {/* Background Glow Effect */}
-        {/* <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-1/2 -translate-x-1/2 filter blur-3xl opacity-20"></div> */}
-
         {/* Center Gradient Line */}
         <div className="flex justify-center -translate-y-[1px]">
           <div className="w-3/4">

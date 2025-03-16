@@ -1,11 +1,3 @@
-// import React from "react";
-
-// const ResumeViewer: React.FC = () => {
-//   return <div>ResumeViewer</div>;
-// };
-
-// export default ResumeViewer;
-
 import React from "react";
 import { FaHome, FaDownload } from "react-icons/fa";
 import resumePDF from "../assets/resume/Adarsh Pandurang Patil @Fullstack Dev - CV.pdf"; // Ensure the path is correct
