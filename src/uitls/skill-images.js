@@ -22,6 +22,7 @@ import nestjs from "../assets/images/skills/nest-js.svg";
 import expressjs from "../assets/images/skills/express.svg";
 import sequelize from "../assets/images/skills/sequelize.svg";
 import typeorm from "../assets/images/skills/typeorm.svg";
+import vite from "../assets/images/skills/vitejs.svg";
 
 export const skillsImage = (skill) => {
   const skillCheck = skill.toLowerCase();
@@ -40,6 +41,8 @@ export const skillsImage = (skill) => {
       return angular;
     case "redux":
       return redux;
+    case "vite":
+      return vite;
     case "tailwind":
       return tailwind;
     case "materialui":

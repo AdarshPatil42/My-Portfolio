@@ -1,96 +1,11 @@
-// import React from "react";
-// import { Link } from "react-scroll";
-
-// const Navbar: React.FC = () => {
-//   return (
-//     <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white p-5 shadow-md z-10">
-//       <ul className="flex justify-center space-x-6">
-//         <li>
-//           <Link
-//             to="home"
-//             smooth={true}
-//             duration={500}
-//             offset={-70}
-//             className="cursor-pointer"
-//           >
-//             Home
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             to="about"
-//             smooth={true}
-//             duration={500}
-//             offset={-70}
-//             className="cursor-pointer"
-//           >
-//             About Me
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             to="experience"
-//             smooth={true}
-//             duration={500}
-//             offset={-70}
-//             className="cursor-pointer"
-//           >
-//             Experience
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             to="skills"
-//             smooth={true}
-//             duration={500}
-//             offset={-70}
-//             className="cursor-pointer"
-//           >
-//             Skills
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             to="education"
-//             smooth={true}
-//             duration={500}
-//             offset={-70}
-//             className="cursor-pointer"
-//           >
-//             Education
-//           </Link>
-//         </li>
-//         <li>
-//           <Link
-//             to="contact"
-//             smooth={true}
-//             duration={500}
-//             offset={-70}
-//             className="cursor-pointer"
-//           >
-//             Contact Us
-//           </Link>
-//         </li>
-//         {/* <li>
-//           <NavLink to="resume" className="cursor-pointer">
-//             Resume
-//           </NavLink>
-//         </li> */}
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../redux/store/store";
-import { toggleMode } from "../redux/features/lightModeSlice";
-import { FaMoon, FaSun } from "react-icons/fa";
+// import { useDispatch, useSelector } from "react-redux";
+// import { AppDispatch, RootState } from "../redux/store/store";
+// import { toggleMode } from "../redux/features/lightModeSlice";
+// import { FaMoon, FaSun } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", link: "home" },
@@ -105,13 +20,12 @@ interface NavbarProps {
   activeSection: string;
 }
 
-// const Navbar: React.FC = () => {
 const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const mode = useSelector((state: RootState) => state.mode.lightMode);
-  const dispatch = useDispatch<AppDispatch>();
+  // const mode = useSelector((state: RootState) => state.mode.lightMode);
+  // const dispatch = useDispatch<AppDispatch>();
 
   // Scroll effect for background blur
   useEffect(() => {
@@ -143,7 +57,19 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     >
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold text-emerald-500">Adarsh</div>
+        <div className="text-2xl font-bold text-emerald-500 border-2 border-emerald-500 px-2 rounded-full">
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-70}
+            className="cursor-pointer"
+            onClick={() => setActive("home")}
+          >
+            AP
+          </Link>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg font-semibold uppercase tracking-wide">
@@ -185,12 +111,12 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
-      <button
+      {/* <button
         className="fixed top-20 right-5 p-3 bg-blue-500 text-white rounded-full hover:bg-blue-600"
         onClick={() => dispatch(toggleMode())}
       >
         {mode ? <FaSun /> : <FaMoon />}
-      </button>
+      </button> */}
 
       {/* Mobile Menu */}
       {isOpen && (

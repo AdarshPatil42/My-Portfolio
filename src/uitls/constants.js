@@ -6,6 +6,7 @@ export const skillsData = [
   "React",
   "Angular",
   "Redux",
+  "Vite",
   "Tailwind",
   "MaterialUI",
   "Bootstrap",
@@ -25,71 +26,105 @@ export const skillsData = [
   "TypeORM",
 ];
 
-export const particalsOptions1 = {
-  background: {
-    color: "transparent", // Keeps section background visible
+export const ProjectsData = [
+  {
+    name: "Blue Ocean Steel(BOS- Ecom Platform for steel materials)",
+    tools: [
+      "React",
+      "MUI",
+      "React Native",
+      "Node.js",
+      "Sequelize",
+      "MySQL",
+      "AWS",
+      "Docker",
+      "Jira",
+      "node-mailer",
+      "Figma",
+    ],
+    role: "Full Stack Developer",
+    description:
+      "BOS is a steel material e-commerce platform where suppliers sell steel, and customers can purchase materials. The platform also incorporates inventory management functionalities. \n" +
+      "• Led the frontend development, designing the project architecture and building reusable components for a scalable application. \n" +
+      "• Contributed to backend development by handling data modeling, creating APIs, and integrating third-party services to enhance platform functionality.",
   },
-  fullScreen: {
-    enable: true,
-    zIndex: -1, // Sends particles behind all content
+  {
+    name: "Window Seat (Audio Content platform Project - for kids)",
+    tools: ["React", "React-Native", "MUI", "Nestjs", "Typeorm", "MariaDB"],
+    description:
+      "• Engineered an audio content management platform akin to a kid-friendly music player, offering stories, podcasts & devotionals for children to enjoy. \n" +
+      "• Spearheaded backend API development & authentication processes, ensuring secure access & seamless operation of platform features. \n" +
+      "• Led the development of an authentication web app & implemented responsive UI designs to enhance user accessibility & interaction across devices. Additionally, contributed to mobile application development using React-Native.",
   },
-  backgroundMask: {
-    enable: true,
-    cover: {
-      color: {
-        value: "#0b0f32", // Dark fallback color
-      },
-    },
+  {
+    name: "Heinekingmedia Gmbh (Whiteboard- School Modal Project)",
+    tools: [
+      "Angular",
+      "Angular Material",
+      "Fabricjs",
+      "Node",
+      "express",
+      "socket.io",
+      "Mysql",
+    ],
+    description:
+      "• Whiteboard is a canvas-based application utilized for collaborative teaching in educational institutions, serving as a crucial tool for both web & android devices. \n" +
+      "• Specialized in canvas operations & collaboration functionalities, leading the implementation of real-time whiteboard collaboration features. \n" +
+      "• Responsible for UI development, API integration, ensuring smooth communication between frontend & backend systems to enhance user interaction & functionality.",
   },
-  particles: {
-    number: {
-      value: 150, // More particles for a dense effect
-      density: { enable: true, value_area: 1200 },
-    },
-    color: {
-      value: ["#FF5733", "#FFC300", "#36D1DC", "#5B86E5", "#FF33F6", "#33FF57"], // Bright neon colors
-    },
-    shape: {
-      type: "circle",
-    },
-    opacity: {
-      value: 0.9,
-      random: true,
-      anim: { enable: true, speed: 0.5, opacity_min: 0.3 },
-    },
-    size: {
-      value: 4,
-      random: true,
-      anim: { enable: true, speed: 2, size_min: 2 },
-    },
-    move: {
-      enable: true,
-      speed: 1.2,
-      direction: "top",
-      random: false,
-      straight: false,
-      out_mode: "out",
-    },
-    shadow: {
-      enable: true,
-      color: "#ffffff", // White glow around particles
-      blur: 15, // More blur = more glow effect
-    },
-    line_linked: { enable: false }, // No lines for a clean look
-  },
-  interactivity: {
-    events: {
-      onHover: { enable: true, mode: "repulse" }, // Particles move away on hover
-      onClick: { enable: true, mode: "push" }, // Clicking creates more particles
-    },
-    modes: {
-      repulse: { distance: 100, duration: 0.4 },
-      push: { particles_nb: 5 },
-    },
-  },
-};
+];
 
-export const particalsOptions2 = {
+export const InternShipProjects = [
+  {
+    name: "Internship Program",
+    tools: [
+      "HTML5",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "React",
+      "Nodejs",
+      "express",
+      "MongoDB",
+      "GitHub",
+    ],
+    role: "Full Stack Developer (Intern)",
+    description:
+      "• Participated in a full stack developer internship at Edureka, contributing to various projects & gaining hands-on experience in web development. \n" +
+      "• Assisted in the development of user-friendly interfaces, API integration, & database management tasks, gaining exposure to industry-standard. \n" +
+      "• Applied technical skills & learned new technologies such as HTML5, CSS, JavaScript, Bootstrap, React, Nodejs, express, MongoDB, GitHub.",
+  },
+];
+
+export const educationData = [
+  {
+    title: "Bachelor of Engineering (Mechanical Engineering)",
+    college: "Dr. DY Patil Pratishthan's College of Engineering, Kolhapur.",
+    percentage: "75%",
+    duration: "2017 - 2020",
+  },
+  {
+    title: "Diploma in Mechanical Engineering",
+    college:
+      "Dr. Bapuji Salunkhe Institute Of Engineering and Technology, Kolhapur.",
+    percentage: "64%",
+    duration: "2015 - 2017",
+  },
+  {
+    title: "Secondary School (HSC)",
+    college: "Sou. SM Lohia Junior College, Kolhapur.",
+    percentage: "56%",
+    duration: "2014 - 2015",
+  },
+  {
+    title: "Primary Education (SSC)",
+    college: "New High School, Bachani.",
+    percentage: "84%",
+    duration: "2012 - 2013",
+  },
+];
+
+export const particalsOptions = {
   background: { color: "transparent" },
   particles: {
     number: { value: 100, density: { enable: true, value_area: 1000 } },
@@ -117,567 +152,4 @@ export const particalsOptions2 = {
       push: { particles_nb: 4 },
     },
   },
-};
-
-export const particalsOptions3 = {
-  autoPlay: true,
-  background: {
-    color: {
-      value: "#000",
-    },
-    image: "",
-    position: "",
-    repeat: "",
-    size: "",
-    opacity: 1,
-  },
-  backgroundMask: {
-    composite: "destination-out",
-    cover: {
-      color: {
-        value: "#fff",
-      },
-      opacity: 1,
-    },
-    enable: false,
-  },
-  fullScreen: {
-    enable: true,
-    zIndex: -1,
-  },
-  detectRetina: true,
-  duration: 0,
-  fpsLimit: 120,
-  interactivity: {
-    detectsOn: "window",
-    events: {
-      onClick: {
-        enable: false,
-        mode: [],
-      },
-      onDiv: {
-        selectors: [],
-        enable: false,
-        mode: [],
-        type: "circle",
-      },
-      onHover: {
-        enable: true,
-        mode: "trail",
-        parallax: {
-          enable: false,
-          force: 2,
-          smooth: 10,
-        },
-      },
-      resize: true,
-    },
-    modes: {
-      attract: {
-        distance: 200,
-        duration: 0.4,
-        easing: "ease-out-quad",
-        factor: 1,
-        maxSpeed: 50,
-        speed: 1,
-      },
-      bounce: {
-        distance: 200,
-      },
-      bubble: {
-        distance: 200,
-        duration: 0.4,
-        mix: false,
-        divs: {
-          distance: 200,
-          duration: 0.4,
-          mix: false,
-          selectors: [],
-        },
-      },
-      connect: {
-        distance: 80,
-        links: {
-          opacity: 0.5,
-        },
-        radius: 60,
-      },
-      grab: {
-        distance: 100,
-        links: {
-          blink: false,
-          consent: false,
-          opacity: 1,
-        },
-      },
-      light: {
-        area: {
-          gradient: {
-            start: {
-              value: "#ffffff",
-            },
-            stop: {
-              value: "#000000",
-            },
-          },
-          radius: 1000,
-        },
-        shadow: {
-          color: {
-            value: "#000000",
-          },
-          length: 2000,
-        },
-      },
-      push: {
-        default: true,
-        groups: [],
-        quantity: 4,
-      },
-      remove: {
-        quantity: 2,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-        factor: 100,
-        speed: 1,
-        maxSpeed: 50,
-        easing: "ease-out-quad",
-        divs: {
-          distance: 200,
-          duration: 0.4,
-          factor: 100,
-          speed: 1,
-          maxSpeed: 50,
-          easing: "ease-out-quad",
-          selectors: [],
-        },
-      },
-      slow: {
-        factor: 3,
-        radius: 200,
-      },
-      trail: {
-        delay: 0.005,
-        pauseOnStop: true,
-        quantity: 5,
-        particles: {
-          color: {
-            value: "#ff0000",
-            animation: {
-              enable: true,
-              speed: 400,
-              sync: true,
-            },
-          },
-          collisions: {
-            enable: false,
-          },
-          links: {
-            enable: false,
-          },
-          move: {
-            outModes: {
-              default: "destroy",
-            },
-            speed: 2,
-          },
-          size: {
-            value: 5,
-            animation: {
-              enable: true,
-              speed: 5,
-              minimumValue: 1,
-              sync: true,
-              startValue: "min",
-              destroy: "max",
-            },
-          },
-        },
-      },
-    },
-  },
-  manualParticles: [],
-  motion: {
-    disable: false,
-    reduce: {
-      factor: 4,
-      value: true,
-    },
-  },
-  particles: {
-    bounce: {
-      horizontal: {
-        random: {
-          enable: false,
-          minimumValue: 0.1,
-        },
-        value: 1,
-      },
-      vertical: {
-        random: {
-          enable: false,
-          minimumValue: 0.1,
-        },
-        value: 1,
-      },
-    },
-    collisions: {
-      bounce: {
-        horizontal: {
-          random: {
-            enable: false,
-            minimumValue: 0.1,
-          },
-          value: 1,
-        },
-        vertical: {
-          random: {
-            enable: false,
-            minimumValue: 0.1,
-          },
-          value: 1,
-        },
-      },
-      enable: true,
-      mode: "bounce",
-      overlap: {
-        enable: true,
-        retries: 0,
-      },
-    },
-    color: {
-      value: "#ff0000",
-      animation: {
-        h: {
-          count: 0,
-          enable: true,
-          offset: 0,
-          speed: 50,
-          sync: false,
-        },
-        s: {
-          count: 0,
-          enable: false,
-          offset: 0,
-          speed: 1,
-          sync: true,
-        },
-        l: {
-          count: 0,
-          enable: false,
-          offset: 0,
-          speed: 1,
-          sync: true,
-        },
-      },
-    },
-    destroy: {
-      mode: "none",
-      split: {
-        count: 1,
-        factor: {
-          random: {
-            enable: false,
-            minimumValue: 0,
-          },
-          value: 3,
-        },
-        rate: {
-          random: {
-            enable: false,
-            minimumValue: 0,
-          },
-          value: {
-            min: 4,
-            max: 9,
-          },
-        },
-        sizeOffset: true,
-      },
-    },
-    gradient: [],
-    groups: {},
-    life: {
-      count: 0,
-      delay: {
-        random: {
-          enable: false,
-          minimumValue: 0,
-        },
-        value: 0,
-        sync: false,
-      },
-      duration: {
-        random: {
-          enable: false,
-          minimumValue: 0.0001,
-        },
-        value: 0,
-        sync: false,
-      },
-    },
-    links: {
-      blink: false,
-      color: {
-        value: "random",
-      },
-      consent: false,
-      distance: 100,
-      enable: true,
-      frequency: 1,
-      opacity: 1,
-      shadow: {
-        blur: 5,
-        color: {
-          value: "#000",
-        },
-        enable: false,
-      },
-      triangles: {
-        enable: false,
-        frequency: 1,
-      },
-      width: 1,
-      warp: false,
-    },
-    move: {
-      angle: {
-        offset: 0,
-        value: 90,
-      },
-      attract: {
-        distance: 200,
-        enable: false,
-        rotate: {
-          x: 3000,
-          y: 3000,
-        },
-      },
-      center: {
-        x: 50,
-        y: 50,
-        radius: 0,
-      },
-      decay: 0,
-      distance: {},
-      direction: "none",
-      drift: 0,
-      enable: true,
-      gravity: {
-        acceleration: 9.81,
-        enable: false,
-        inverse: false,
-        maxSpeed: 50,
-      },
-      path: {
-        clamp: true,
-        delay: {
-          random: {
-            enable: false,
-            minimumValue: 0,
-          },
-          value: 0,
-        },
-        enable: false,
-        options: {},
-      },
-      outModes: {
-        default: "out",
-        bottom: "out",
-        left: "out",
-        right: "out",
-        top: "out",
-      },
-      random: false,
-      size: false,
-      speed: 2,
-      spin: {
-        acceleration: 0,
-        enable: false,
-      },
-      straight: false,
-      trail: {
-        enable: false,
-        length: 10,
-        fillColor: {
-          value: "#000000",
-        },
-      },
-      vibrate: false,
-      warp: false,
-    },
-    number: {
-      density: {
-        enable: true,
-        area: 800,
-        factor: 1000,
-      },
-      limit: 0,
-      value: 100,
-    },
-    opacity: {
-      random: {
-        enable: true,
-        minimumValue: 0.3,
-      },
-      value: {
-        min: 0.3,
-        max: 0.8,
-      },
-      animation: {
-        count: 0,
-        enable: true,
-        speed: 0.5,
-        sync: false,
-        destroy: "none",
-        startValue: "random",
-        minimumValue: 0.3,
-      },
-    },
-    orbit: {
-      animation: {
-        count: 0,
-        enable: false,
-        speed: 1,
-        sync: false,
-      },
-      enable: false,
-      opacity: 1,
-      rotation: {
-        random: {
-          enable: false,
-          minimumValue: 0,
-        },
-        value: 45,
-      },
-      width: 1,
-    },
-    reduceDuplicates: false,
-    repulse: {
-      random: {
-        enable: false,
-        minimumValue: 0,
-      },
-      value: 0,
-      enabled: false,
-      distance: 1,
-      duration: 1,
-      factor: 1,
-      speed: 1,
-    },
-    roll: {
-      darken: {
-        enable: false,
-        value: 0,
-      },
-      enable: false,
-      enlighten: {
-        enable: false,
-        value: 0,
-      },
-      mode: "vertical",
-      speed: 25,
-    },
-    rotate: {
-      random: {
-        enable: false,
-        minimumValue: 0,
-      },
-      value: 0,
-      animation: {
-        enable: false,
-        speed: 0,
-        sync: false,
-      },
-      direction: "clockwise",
-      path: false,
-    },
-    shadow: {
-      blur: 0,
-      color: {
-        value: "#000",
-      },
-      enable: false,
-      offset: {
-        x: 0,
-        y: 0,
-      },
-    },
-    shape: {
-      options: {},
-      type: "circle",
-    },
-    size: {
-      random: {
-        enable: true,
-        minimumValue: 1,
-      },
-      value: {
-        min: 1,
-        max: 3,
-      },
-      animation: {
-        count: 0,
-        enable: true,
-        speed: 3,
-        sync: false,
-        destroy: "none",
-        startValue: "random",
-        minimumValue: 1,
-      },
-    },
-    stroke: {
-      width: 0,
-    },
-    tilt: {
-      random: {
-        enable: false,
-        minimumValue: 0,
-      },
-      value: 0,
-      animation: {
-        enable: false,
-        speed: 0,
-        sync: false,
-      },
-      direction: "clockwise",
-      enable: false,
-    },
-    twinkle: {
-      lines: {
-        enable: false,
-        frequency: 0.05,
-        opacity: 1,
-      },
-      particles: {
-        enable: false,
-        frequency: 0.05,
-        opacity: 1,
-      },
-    },
-    wobble: {
-      distance: 5,
-      enable: false,
-      speed: 50,
-    },
-    zIndex: {
-      random: {
-        enable: false,
-        minimumValue: 0,
-      },
-      value: 0,
-      opacityRate: 1,
-      sizeRate: 1,
-      velocityRate: 1,
-    },
-  },
-  pauseOnBlur: true,
-  pauseOnOutsideViewport: true,
-  responsive: [],
-  style: {},
-  themes: [],
-  zLayers: 100,
-  emitters: [],
 };

@@ -8,6 +8,8 @@ import Education from "./Education";
 import ContactMe from "./ContactMe";
 import ScrollToTop from "../components/ScrollToTop";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
+// import Footer from "./Footer";
 
 const sections = [
   "home",
@@ -83,6 +85,7 @@ const Portfolio: React.FC = () => {
       <Element name="contact">
         <ContactMe />
       </Element>
+      <Footer />
       {showScrollTop && <ScrollToTop />}
     </div>
   );
