@@ -1,10 +1,9 @@
 import React, { useCallback } from "react";
 import { motion } from "framer-motion";
-import { MyImg } from "../theme/images";
+import { MyImg } from "../theme/images.ts";
 import { Typewriter } from "react-simple-typewriter";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
-import { particalsOptions } from "../uitls/constants.js";
 import { FaStackOverflow, FaUserFriends } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -51,7 +50,35 @@ const HeroSection: React.FC = () => {
       <Particles
         id="tsparticles"
         init={particlesInit}
-        options={particalsOptions}
+        options={{
+          background: { color: "transparent" },
+          particles: {
+            number: { value: 100, density: { enable: true, value_area: 1000 } },
+            color: { value: ["#FF5733", "#FFC300", "#36D1DC", "#5B86E5"] },
+            shape: { type: "circle" },
+            opacity: { value: 0.7, random: true },
+            size: { value: 4, random: true },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "top",
+              random: false,
+              straight: false,
+              out_mode: "out",
+            },
+            line_linked: { enable: false },
+          },
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: "repulse" },
+              onClick: { enable: true, mode: "push" },
+            },
+            modes: {
+              repulse: { distance: 120, duration: 0.4 },
+              push: { particles_nb: 4 },
+            },
+          },
+        }}
         className="absolute top-0 left-0 w-full h-full -z-10 bg-gradient-to-br from-[#0b0f32] to-[#211944]"
       />
 

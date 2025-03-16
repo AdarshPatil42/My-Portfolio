@@ -1,5 +1,5 @@
-import { skillsData } from "../uitls/constants.js";
-import { skillsImage } from "../uitls/skill-images.js";
+import { skillsData } from "../uitls/constants.ts";
+import { skillsImage } from "../uitls/skill-images.ts";
 import Marquee from "react-fast-marquee";
 
 const Skills: React.FC = () => {
@@ -49,7 +49,7 @@ const Skills: React.FC = () => {
                   <div className="flex flex-col items-center justify-center gap-3 p-6">
                     <div className="h-8 sm:h-10">
                       <img
-                        src={skillsImage(skill)}
+                        src={skillsImage(skill) || ""}
                         alt={skill}
                         className="h-[40px] w-[40px]"
                       />

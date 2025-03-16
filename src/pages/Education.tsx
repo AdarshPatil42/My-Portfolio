@@ -3,7 +3,7 @@ import LottieAnimatedImg from "../components/LottieAnimatedImg";
 import educationImg from "../assets/lottie/education.json";
 import { FaGraduationCap } from "react-icons/fa";
 import GlowingCard from "../components/GlowingCard.js";
-import { educationData } from "../uitls/constants.js";
+import { educationData } from "../uitls/constants.ts";
 
 const Education: React.FC = () => {
   return (

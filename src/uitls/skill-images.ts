@@ -24,7 +24,7 @@ import sequelize from "../assets/images/skills/sequelize.svg";
 import typeorm from "../assets/images/skills/typeorm.svg";
 import vite from "../assets/images/skills/vitejs.svg";
 
-export const skillsImage = (skill) => {
+export const skillsImage = (skill: string) => {
   const skillCheck = skill.toLowerCase();
   switch (skillCheck) {
     case "html":

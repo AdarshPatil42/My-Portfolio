@@ -12,7 +12,9 @@ const GlowingCard: React.FC<GlowingCardProps> = ({
   isSticky = false,
 }) => {
   useEffect(() => {
-    const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
+    const CONTAINER = document.querySelector(
+      `.glow-container-${identifier}`
+    ) as HTMLElement;
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
 
     const CONFIG = {
@@ -25,7 +27,8 @@ const GlowingCard: React.FC<GlowingCardProps> = ({
     };
 
     const UPDATE = (event: MouseEvent) => {
-      for (const CARD of CARDS) {
+      CARDS.forEach((card) => {
+        const CARD = card as HTMLElement;
         const CARD_BOUNDS = CARD.getBoundingClientRect();
 
         if (
@@ -34,9 +37,9 @@ const GlowingCard: React.FC<GlowingCardProps> = ({
           event?.y > CARD_BOUNDS.top - CONFIG.proximity &&
           event?.y < CARD_BOUNDS.top + CARD_BOUNDS.height + CONFIG.proximity
         ) {
-          CARD.style.setProperty("--active", 1);
+          CARD.style.setProperty("--active", "1");
         } else {
-          CARD.style.setProperty("--active", CONFIG.opacity);
+          CARD.style.setProperty("--active", CONFIG.opacity.toString());
         }
 
         const CARD_CENTER = [
@@ -51,17 +54,17 @@ const GlowingCard: React.FC<GlowingCardProps> = ({
 
         ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
 
-        CARD.style.setProperty("--start", ANGLE + 90);
-      }
+        CARD.style.setProperty("--start", (ANGLE + 90).toString());
+      });
     };
 
     document.body.addEventListener("pointermove", UPDATE);
 
     const RESTYLE = () => {
       if (!CONTAINER) return;
-      CONTAINER.style.setProperty("--gap", CONFIG.gap);
-      CONTAINER.style.setProperty("--blur", CONFIG.blur);
-      CONTAINER.style.setProperty("--spread", CONFIG.spread);
+      CONTAINER.style.setProperty("--gap", CONFIG.gap.toString());
+      CONTAINER.style.setProperty("--blur", CONFIG.blur.toString());
+      CONTAINER.style.setProperty("--spread", CONFIG.spread.toString());
       CONTAINER.style.setProperty(
         "--direction",
         CONFIG.vertical ? "column" : "row"
@@ -69,12 +72,12 @@ const GlowingCard: React.FC<GlowingCardProps> = ({
     };
 
     RESTYLE();
-    // UPDATE();
 
     return () => {
       document.body.removeEventListener("pointermove", UPDATE);
     };
   }, [identifier]);
+
   return (
     <div
       className={`glow-container-${identifier} glow-container ${

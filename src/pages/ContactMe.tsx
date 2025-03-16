@@ -93,11 +93,11 @@ const ContactMe: React.FC = () => {
       </div>
 
       {/* Heading Section */}
-      <div className="my-12">
-        <h2 className="text-4xl ms-10 font-bold text-fuchsia-400">
+      <div className="ms-12 my-12 relative">
+        <h2 className="text-4xl font-bold text-fuchsia-400 inline-block relative after:content-[''] after:block after:w-[calc(100%+2px)] after:h-1 after:bg-gradient-to-r after:from-fuchsia-400 after:to-transparent after:mt-2 after:rounded-full">
           Contact Me
         </h2>
-        <p className="text-gray-300 text-lg ms-10 mt-2">
+        <p className="text-gray-300 text-sm mt-2">
           Have a project in mind? Let’s bring it to life! 🚀
         </p>
       </div>

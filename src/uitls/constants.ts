@@ -1,4 +1,5 @@
-export const skillsData = [
+
+export const skillsData: string[] = [
   "HTML",
   "CSS",
   "Javascript",
@@ -26,7 +27,7 @@ export const skillsData = [
   "TypeORM",
 ];
 
-export const ProjectsData = [
+export const ProjectsData:{name:string,tools:string[],role:string,description:string}[] = [
   {
     name: "Blue Ocean Steel(BOS- Ecom Platform for steel materials)",
     tools: [
@@ -51,6 +52,7 @@ export const ProjectsData = [
   {
     name: "Window Seat (Audio Content platform Project - for kids)",
     tools: ["React", "React-Native", "MUI", "Nestjs", "Typeorm", "MariaDB"],
+    role: "Full Stack Developer",
     description:
       "• Engineered an audio content management platform akin to a kid-friendly music player, offering stories, podcasts & devotionals for children to enjoy. \n" +
       "• Spearheaded backend API development & authentication processes, ensuring secure access & seamless operation of platform features. \n" +
@@ -67,6 +69,7 @@ export const ProjectsData = [
       "socket.io",
       "Mysql",
     ],
+    role: "Frontend Developer",
     description:
       "• Whiteboard is a canvas-based application utilized for collaborative teaching in educational institutions, serving as a crucial tool for both web & android devices. \n" +
       "• Specialized in canvas operations & collaboration functionalities, leading the implementation of real-time whiteboard collaboration features. \n" +
@@ -74,7 +77,7 @@ export const ProjectsData = [
   },
 ];
 
-export const InternShipProjects = [
+export const InternShipProjects:{name:string,tools:string[],role:string,description:string}[] = [
   {
     name: "Internship Program",
     tools: [
@@ -96,7 +99,12 @@ export const InternShipProjects = [
   },
 ];
 
-export const educationData = [
+export const educationData: {
+  title: string,
+  college: string,
+  percentage: string,
+  duration: string,
+}[] = [
   {
     title: "Bachelor of Engineering (Mechanical Engineering)",
     college: "Dr. DY Patil Pratishthan's College of Engineering, Kolhapur.",
@@ -128,14 +136,14 @@ export const particalsOptions = {
   background: { color: "transparent" },
   particles: {
     number: { value: 100, density: { enable: true, value_area: 1000 } },
-    color: { value: ["#FF5733", "#FFC300", "#36D1DC", "#5B86E5"] }, // Colorful particles
+    color: { value: ["#FF5733", "#FFC300", "#36D1DC", "#5B86E5"] },
     shape: { type: "circle" },
     opacity: { value: 0.7, random: true },
     size: { value: 4, random: true },
     move: {
       enable: true,
       speed: 2,
-      direction: "top", // Move upwards
+      direction: "top", 
       random: false,
       straight: false,
       out_mode: "out",
@@ -144,7 +152,7 @@ export const particalsOptions = {
   },
   interactivity: {
     events: {
-      onHover: { enable: true, mode: "repulse" }, // Repel particles on cursor movement
+      onHover: { enable: true, mode: "repulse" },
       onClick: { enable: true, mode: "push" },
     },
     modes: {
