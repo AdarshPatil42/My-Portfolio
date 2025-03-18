@@ -13,20 +13,27 @@ const Experience: React.FC = () => {
           <div className="h-[2px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
         </div>
       </div>
+
       {/* Heading */}
-      <div className="ms-12 my-12 relative">
-        <h2 className="text-4xl font-bold text-green-400 inline-block relative after:content-[''] after:block after:w-[calc(100%+2px)] after:h-1 after:bg-gradient-to-r after:from-green-400 after:to-transparent after:mt-2 after:rounded-full">
+      <div className="px-6 md:ms-12 my-12 relative text-center md:text-left">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-green-400 inline-block relative 
+          after:content-[''] after:block after:w-[calc(100%+2px)] after:h-1 
+          after:bg-gradient-to-r after:from-green-400 after:to-transparent after:mt-2 after:rounded-full"
+        >
           Experience
         </h2>
         <p className="text-gray-300 text-sm mt-2">
           My professional journey so far
         </p>
       </div>
-      <div className=" flex">
-        <div className="w-[40%] p-4 ps-12">
+
+      {/* Work Experience */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-12 px-6">
+        <div className="w-full md:w-[40%] p-4 md:ps-12">
           <GlowingCard identifier={"experience-1"} isSticky={true}>
-            <div className="w-full relative flex items-center gap-6 bg-transparent rounded-xl p-6 shadow-lg">
-              <div className="w-16 h-16 flex-shrink-0">
+            <div className="w-full flex items-center gap-4 md:gap-6 bg-transparent rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
                 <img
                   src={StudingImg}
                   alt="experience"
@@ -34,37 +41,45 @@ const Experience: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <h2 className="text-3xl font-semibold text-white">
+                <h2 className="text-xl md:text-2xl font-semibold text-white">
                   Full Stack Developer
                 </h2>
-                <p className="text-lg italic text-gray-300">
-                  Springup Labs Pvt ltd.
+                <p className="text-sm md:text-lg italic text-gray-300">
+                  Springup Labs Pvt Ltd.
                 </p>
-                <p className="text-lg text-gray-400">📍 Baner, Pune.</p>
-                <p className="text-lg text-gray-400">📅 Dec 2022 - Present</p>
+                <p className="text-sm md:text-lg text-gray-400">
+                  📍 Baner, Pune
+                </p>
+                <p className="text-sm md:text-lg text-gray-400">
+                  📅 Dec 2022 - Present
+                </p>
               </div>
             </div>
           </GlowingCard>
         </div>
-        <div className="w-[60%] flex flex-col gap-6">
+
+        {/* Projects Section */}
+        <div className="w-full md:w-[60%] flex flex-col gap-4 md:gap-6">
           {ProjectsData.slice(0, 4).map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}
               className="sticky-card w-full mx-auto max-w-2xl sticky"
             >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+              <div className="box-border flex items-center justify-center rounded shadow-lg transition-all duration-500">
                 <ProjectCard project={project} />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className=" flex mt-12">
-        <div className="w-[40%] p-4 ps-12">
+
+      {/* Internship Experience */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-12 px-6 mt-8">
+        <div className="w-full md:w-[40%] p-4 md:ps-12">
           <GlowingCard identifier={"experience-2"} isSticky={true}>
-            <div className="w-full relative flex items-center gap-6 bg-transparent rounded-xl p-6 shadow-lg">
-              <div className="w-16 h-16 flex-shrink-0">
+            <div className="w-full flex items-center gap-4 md:gap-6 bg-transparent rounded-xl p-6 shadow-lg">
+              <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
                 <img
                   src={StudingImg}
                   alt="experience"
@@ -72,24 +87,30 @@ const Experience: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <h2 className="text-3xl font-semibold text-white">
+                <h2 className="text-xl md:text-2xl font-semibold text-white">
                   Full Stack Developer (Intern)
                 </h2>
-                <p className="text-lg italic text-gray-300">Edureka</p>
-                <p className="text-lg text-gray-400">📍 Bengaluru</p>
-                <p className="text-lg text-gray-400">📅 Jan 2022 – Aug 2022</p>
+                <p className="text-sm md:text-lg italic text-gray-300">
+                  Edureka
+                </p>
+                <p className="text-sm md:text-lg text-gray-400">📍 Bengaluru</p>
+                <p className="text-sm md:text-lg text-gray-400">
+                  📅 Jan 2022 – Aug 2022
+                </p>
               </div>
             </div>
           </GlowingCard>
         </div>
-        <div className="w-[60%] flex flex-col gap-6">
+
+        {/* Internship Projects */}
+        <div className="w-full md:w-[60%] flex flex-col gap-4 md:gap-6">
           {InternShipProjects.slice(0, 4).map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}
-              className="sticky-card w-full mx-auto max-w-2xl sticky"
+              className="w-full mx-auto max-w-2xl md:sticky"
             >
-              <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
+              <div className="box-border flex items-center justify-center rounded shadow-lg transition-all duration-500">
                 <ProjectCard project={project} />
               </div>
             </div>
