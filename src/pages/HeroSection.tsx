@@ -136,14 +136,15 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Resume Button */}
-        <div className="flex gap-4 mt-6">
+        <div className="flex flex-wrap gap-4 mt-10 justify-center md:justify-start">
           <motion.button
-            className=" px-6 py-3 text-white font-medium rounded-full border-2 border-[#ff00ff] transition-all duration-300"
+            className="px-6 py-3 text-white text-sm md:text-base whitespace-nowrap font-medium rounded-full 
+               border-2 border-[#ff00ff] transition-all duration-300 flex items-center gap-2"
             whileHover={{ scale: 1.1 }}
           >
             <Link
               to="contact"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 flex-nowrap"
               spy={true}
               smooth={true}
               duration={500}
@@ -152,9 +153,11 @@ const HeroSection: React.FC = () => {
               CONTACT ME <FaUserFriends />
             </Link>
           </motion.button>
+
           <motion.button
-            className="flex items-center gap-2 px-6 py-3 font-medium text-white rounded-full 
-                  bg-gradient-to-r from-pink-500 to-purple-500 hover:opacity-80 transition-all duration-300 shadow-lg"
+            className="flex items-center gap-2 px-6 py-3 text-white text-sm md:text-base font-medium 
+               whitespace-nowrap rounded-full bg-gradient-to-r from-pink-500 to-purple-500 
+               hover:opacity-80 transition-all duration-300 shadow-lg min-w-[140px]"
             whileHover={{ scale: 1.1 }}
             onClick={() => navigate("/resume")}
           >
@@ -163,7 +166,7 @@ const HeroSection: React.FC = () => {
         </div>
       </motion.div>
       <motion.div
-        className="relative flex items-center justify-center"
+        className="relative flex items-center justify-center mt-10 md:mt-0"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
