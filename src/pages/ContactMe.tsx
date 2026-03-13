@@ -21,7 +21,7 @@ const ContactMe: React.FC = () => {
     setEmailError(
       /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
         ? ""
-        : "Please provide a valid email!"
+        : "Please provide a valid email!",
     );
   };
 
@@ -48,7 +48,7 @@ const ContactMe: React.FC = () => {
         {
           method: "POST",
           body: formData,
-        }
+        },
       );
 
       if (response.ok) {
@@ -187,7 +187,7 @@ const ContactMe: React.FC = () => {
               <FaLinkedin />
             </a>
             <a
-              href="https://github.com/adarshpatil042"
+              href="https://github.com/adarshpatil42"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer hover:text-white transition-all"

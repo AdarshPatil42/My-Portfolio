@@ -20,7 +20,7 @@ const socialLinks = [
   },
   {
     icon: <FaGithub className="h-5 w-5 text-gray-300" />,
-    link: "https://github.com/adarshpatil042",
+    link: "https://github.com/adarshpatil42",
     color: "bg-gray-300",
     shadow: "shadow-[0_0_15px_#ffffff]",
   },
